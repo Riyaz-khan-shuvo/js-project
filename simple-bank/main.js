@@ -21,3 +21,20 @@ depositBtn.addEventListener("click", function () {
     currentBalance.innerText = currentTotalBalance;
 
 })
+
+// Withdraw area
+
+const withdrawBtn = document.getElementById('addWithdraw')
+
+withdrawBtn.addEventListener("click", function () {
+    const withdrawAmount = document.getElementById('withdrawAmount').value;
+    const currentWithdraw = document.getElementById('currentWithdraw');
+    const currentBalance = document.getElementById('currentBalance');
+
+    const totalWithdraw = parseInt(withdrawAmount) + parseInt(currentWithdraw.innerText);
+    const totalCurrentBalance = parseInt(currentBalance.innerText) - parseInt(withdrawAmount)
+
+    currentWithdraw.innerText = totalWithdraw;
+    currentBalance.innerText = totalCurrentBalance;
+
+})
